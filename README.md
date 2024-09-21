@@ -6,4 +6,4 @@ Please note that not all projects have detailed README files. Some include repor
 
 Although this collection doesn’t cover every project from my degree, it showcases some of the most significant and interesting work I completed during my studies.
 
-Feel free to browse through the projects, and don’t hesitate to reach out if you have any questions or suggestions!
+
