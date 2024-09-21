@@ -1,4 +1,4 @@
-# CSD-AUTH
+# University Projects
 
 This repository contains a selection of the projects I completed during my Bachelor’s degree in Informatics at Aristotle University of Thessaloniki. While it includes only a portion of my university work, the projects featured here reflect my exploration of various topics, from software development to algorithmic problem-solving.
 
