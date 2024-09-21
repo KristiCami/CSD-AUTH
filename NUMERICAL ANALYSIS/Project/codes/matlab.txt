@@ -1,0 +1,27 @@
+
+PLOT OF COS(Θ)
+
+x = -pi:0.001:pi;
+y = cos(x);
+plot(x,y,"Color",'r',"LineWidth",2.5);
+ax = gca;
+ax.XTick = -pi:pi/2:pi;
+ax.XTickLabel = {'-pi','-pi/2','0','pi/2','pi'};
+xlabel("Θ");
+ylabel("cos(Θ)");
+title("Plot of cos(Θ)");
+text(-pi/4,0.7,'\leftarrow cos(-pi/4)');
+
+PLOT OF COS(Θ) AND SIN(Θ)
+
+x = -pi:0.001:pi;
+plot(x,cos(x),"b",x,sin(x),"g");
+ax = gca;
+ax.XTick = -pi:pi/2:pi;
+ax.XTickLabel = {'-pi','-pi/2','0','pi/2','pi'};
+xlabel("Θ");
+ylabel("cos(Θ) and sin(Θ)");
+title("Plot of cos(Θ) and sin(Θ)");
+text(-pi/4,0.7,'\leftarrow cos(-pi/4)');
+text(-pi/4,-0.7,'\leftarrow sin(-pi/4)');
+legend('Cos(Θ)','Sin(Θ)','Location','northwest');
