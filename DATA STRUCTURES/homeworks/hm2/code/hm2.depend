@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1617615953 source:c:\users\user\onedrive - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\Επιφάνεια εργασίας\codes (c)\hm2\date.cpp
+	"Date.h"
+	<iostream>
+
+1617547697 c:\users\user\onedrive - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\Επιφάνεια εργασίας\codes (c)\hm2\date.h
+
+1617547697 source:c:\users\user\onedrive - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\Επιφάνεια εργασίας\codes (c)\hm2\main.cpp
+	<iostream>
+	"Date.h"
+

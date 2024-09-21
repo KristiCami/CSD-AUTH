@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1620205421 source:c:\users\user\onedrive - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\Επιφάνεια εργασίας\codes (c)\newproject\student.cpp
+	"Student.h"
+	<fstream>
+	<cstring>
+	<iostream>
+
+1620204948 c:\users\user\onedrive - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\Επιφάνεια εργασίας\codes (c)\newproject\student.h
+	<iostream>
+
+1620202242 source:c:\users\user\onedrive - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\Επιφάνεια εργασίας\codes (c)\newproject\main.cpp
+	<iostream>
+	"Student.h"
+

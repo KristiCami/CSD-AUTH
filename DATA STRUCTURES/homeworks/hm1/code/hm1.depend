@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1617444889 source:c:\users\user\onedrive - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\Επιφάνεια εργασίας\codes (c)\hm1\vector.cpp
+	"Vector.h"
+	<cmath>
+
+1617441203 source:c:\users\user\onedrive - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\Επιφάνεια εργασίας\codes (c)\hm1\main.cpp
+	<iostream>
+	<iomanip>
+	"Vector.h"
+
+1617445122 c:\users\user\onedrive - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\Επιφάνεια εργασίας\codes (c)\hm1\vector.h
+	<iostream>
+

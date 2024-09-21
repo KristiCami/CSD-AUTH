@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1618692843 source:c:\users\user\onedrive - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\Επιφάνεια εργασίας\codes (c)\hm5\rational.cpp
+	"Rational.h"
+	<cmath>
+	<iostream>
+
+1618672390 c:\users\user\onedrive - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\Επιφάνεια εργασίας\codes (c)\hm5\rational.h
+	<iostream>
+
+1618655399 source:c:\users\user\onedrive - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης\Επιφάνεια εργασίας\codes (c)\hm5\main.cpp
+	<iostream>
+	"Rational.h"
+
