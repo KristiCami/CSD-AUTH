@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Style the header */
+.header {
+    background-color: #596f86;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
+
+.header h2 {
+    color: green;
+}
+
+/* Style Section Two */
+.section-two {
+    flex: 3;
+    /* Προσαρμόστε την τιμή flex για την Section Two */
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.section-two h2 {
+    color: green;
+    /* Πράσινο χρώμα για τους τίτλους h2 */
+}
+
+/* Style the main content */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+/* Style Section One */
+.section {
+    flex: 1;
+    background-color: #ddd;
+    padding: 10px;
+}
+
+/* Style the buttons */
+.buttons button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #596f86;
+    /* Blue background color */
+    color: #fff;
+    /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.buttons button:hover {
+    background-color: #242d38;
+    /* Darker blue on hover */
+}
+
+
+/* Style Section Two */
+.section-two {
+    flex: 3;
+    /* Adjusted flex value for Section Two */
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.section-two img {
+    max-width: 50%;
+    height: auto;
+}
+
+.top {
+    margin-left: 90%;
+    margin-top: 5%;
+}
+
+/* Style the form */
+.form-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-label input[type="text"] {
+    flex: 1;
+    margin-left: 10px;
+}
