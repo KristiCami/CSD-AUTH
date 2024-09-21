@@ -1,0 +1,26 @@
+<ion-content>
+  <!-- Video area -->
+  <div class="video-container">
+    <video controls  #videoPlayer playsinline>
+      <source src="../../assets/videoplayback.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    
+  </div>
+
+  <!-- Chat area -->
+  <div class="chat-container">
+    <ion-list>
+      <ion-item *ngFor="let message of messages">
+        <ion-label>{{ message.sender }}</ion-label>
+        <ion-text>{{ message.content }}</ion-text>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <!-- Buttons -->
+  <div class="button-container">
+    <ion-button expand="full" color="primary">KRISTI CAMI</ion-button>
+    <!-- <ion-button expand="full" color="secondary">Button 2</ion-button> -->
+  </div>
+</ion-content>
