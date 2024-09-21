@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">MaPass</string>
+    <string name="text1">PASSWORD MANAGER</string>
+    <string name="user">Username</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="pass">Password</string>
+    <string name="add">Add Account</string>
+    <string name="show">Show Accounts</string>
+</resources>
