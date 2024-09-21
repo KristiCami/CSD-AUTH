@@ -1,0 +1,41 @@
+<html lang="gr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Ομιλία</th>
+                <th> Κόμμα </th>
+                <th> Λέξεις-Κλειδιά </th>
+            </tr>
+            {% for id, party, tags in sittings %}
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    <form method="POST" action="" id="annotator">
+                        <input type="submit" name="sitting" value="{{id}}"></input>
+                    </form>
+                </td>
+                <td>
+                    <form method="POST" action="" id="annotator">
+                        <input type="submit" name="party" value="{{party}}"></input>
+                    </form>
+                </td>
+
+                <td> {{tags}} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    </table>
+</body>

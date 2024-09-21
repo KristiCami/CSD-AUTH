@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Ομιλία</th>
+                <th>Βουλευτής</th>
+                <th>Λέξεις-Κλειδιά</th>
+            </tr>
+            {% for id, speaker, tags in sittings %}
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <form method="POST" action="" class="annotator-form">
+                        <input type="submit" name="sitting" value="{{ id }}">
+                    </form>
+                </td>
+
+                <td>
+                    <form method="POST" action="" class="annotator-form">
+                        <input type="submit" name="speaker" value="{{ speaker }}">
+                    </form>
+                </td>
+
+                <td>{{ tags }}</td>
+            </tr>
+
+
+        </tbody>
+        {% endfor %}
+    </table>
+
+</body>
+
+</html>

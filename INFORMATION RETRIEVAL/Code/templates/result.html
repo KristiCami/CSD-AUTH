@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="gr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Ομιλία</th>
+        <th>Βουλευτής</th>
+        <th>Κόμμα</th>
+        <th>Λέξεις-Κλειδιά</th>
+        <th>Score</th>
+      </tr>
+      {% for id, speaker, party, tags, score in queryDetails %}
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <form method="POST" action="" id="annotator">
+            <input type="submit" name="sitting" value="{{id}}" />
+          </form>
+        </td>
+        <td>
+          <form method="POST" action="" id="annotator">
+            <input type="submit" name="speaker" value="{{speaker}}" />
+          </form>
+        </td>
+        <td>
+          <form method="POST" action="" id="annotator">
+            <input type="submit" name="party" value="{{party}}" />
+          </form>
+        </td>
+        <td>{{tags}}</td>
+        <td>{{score}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</body>
+
+</html>
