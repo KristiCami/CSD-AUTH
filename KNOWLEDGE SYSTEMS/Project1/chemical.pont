@@ -1,0 +1,343 @@
+; Wed Dec 06 12:47:52 EET 2023
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot title
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot c
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot spectroscopy
+		(type SYMBOL)
+		(allowed-values S C metal Na)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot has_chemical
+		(type INSTANCE)
+;+		(allowed-classes Chemical)
+;+		(inverse-slot exists_in)
+		(create-accessor read-write))
+	(multislot inverse_of_has
+		(type INSTANCE)
+;+		(allowed-classes ControlStation)
+;+		(inverse-slot has)
+		(create-accessor read-write))
+	(single-slot color
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot s
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot weight
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot highlyToxicPCBs
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(value TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot metal
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot exists_in
+		(type INSTANCE)
+;+		(allowed-classes ControlStation)
+;+		(inverse-slot has_chemical)
+		(create-accessor read-write))
+	(single-slot chemical_Class10
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot hazard
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot burnSkin
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot explosive
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(value TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot has
+		(type INSTANCE)
+;+		(allowed-classes Chemical)
+		(cardinality 1 ?VARIABLE)
+;+		(inverse-slot inverse_of_has)
+		(create-accessor read-write))
+	(single-slot radioactive
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot chemical_Class10055
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot name_
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot KB_622958_Class10
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot chemical_Class0
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Na
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot chemical_Class1
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot waterSolubility
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot chemical_Class8
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot chemical_Class9
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot chemical_Class10006
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot chemical_Class10001
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot smell
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot pH
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Chemical
+	(is-a USER)
+	(role abstract)
+	(multislot exists_in
+		(type INSTANCE)
+;+		(allowed-classes ControlStation)
+		(create-accessor read-write))
+	(single-slot spectroscopy
+		(type SYMBOL)
+		(allowed-values S C metal Na)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot waterSolubility
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot color
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot hazard
+		(type STRING)
+		(create-accessor read-write))
+	(single-slot weight
+		(type FLOAT)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot radioactive
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot name_
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot smell
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot pH
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Acid
+	(is-a Chemical)
+	(role concrete)
+	(single-slot waterSolubility
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(value TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot pH
+		(type FLOAT)
+		(range %3FVARIABLE 5.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass StrongAcid
+	(is-a Acid)
+	(role concrete)
+	(multislot hazard
+		(type STRING)
+		(default "burnSkin")
+		(create-accessor read-write))
+	(single-slot pH
+		(type FLOAT)
+		(range %3FVARIABLE 2.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass WeakAcid
+	(is-a Acid)
+	(role concrete)
+	(single-slot pH
+		(type FLOAT)
+		(range 3.0 5.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Base
+	(is-a Chemical)
+	(role concrete)
+	(single-slot waterSolubility
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(value TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot pH
+		(type FLOAT)
+		(range 8.0 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass StrongBase
+	(is-a Base)
+	(role concrete)
+	(single-slot pH
+		(type FLOAT)
+		(range 11.0 %3FVARIABLE)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass WeakBase
+	(is-a Base)
+	(role concrete)
+	(single-slot pH
+		(type FLOAT)
+		(range 8.0 10.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Oil
+	(is-a Chemical)
+	(role concrete)
+	(single-slot spectroscopy
+		(type SYMBOL)
+		(allowed-values S C metal Na)
+;+		(value C)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot waterSolubility
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(value FALSE)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot pH
+		(type FLOAT)
+		(range 6.0 7.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass ControlStation
+	(is-a USER)
+	(role concrete)
+	(multislot has_chemical
+		(type INSTANCE)
+;+		(allowed-classes Chemical)
+		(create-accessor read-write))
+	(single-slot title
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Manhole12
+	(is-a ControlStation)
+	(role concrete))
+
+(defclass Manhole9
+	(is-a Manhole12)
+	(role concrete))
+
+(defclass Manhole1
+	(is-a Manhole9)
+	(role concrete))
+
+(defclass Manhole2
+	(is-a Manhole9)
+	(role concrete))
+
+(defclass Manhole3
+	(is-a Manhole9)
+	(role concrete))
+
+(defclass Manhole10
+	(is-a Manhole12)
+	(role concrete))
+
+(defclass Manhole4
+	(is-a Manhole10)
+	(role concrete))
+
+(defclass Manhole5
+	(is-a Manhole10)
+	(role concrete))
+
+(defclass Manhole13
+	(is-a ControlStation)
+	(role concrete))
+
+(defclass Manhole11
+	(is-a Manhole13)
+	(role concrete))
+
+(defclass Manhole6
+	(is-a Manhole11)
+	(role concrete))
+
+(defclass Manhole7
+	(is-a Manhole11)
+	(role concrete))
+
+(defclass Manhole8
+	(is-a Manhole13)
+	(role concrete))

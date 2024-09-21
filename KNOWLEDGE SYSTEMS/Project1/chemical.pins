@@ -1,0 +1,158 @@
+; Wed Dec 06 12:47:52 EET 2023
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([chemical_Class20003] of  Manhole4
+
+	(has_chemical
+		[chemical_Class20009]
+		[chemical_Class20008]
+		[chemical_Class20014])
+	(title "Store4"))
+
+([chemical_Class20004] of  Manhole1
+
+	(has_chemical
+		[chemical_Class20007]
+		[chemical_Class20014])
+	(title "Store1"))
+
+([chemical_Class20005] of  Manhole2
+
+	(has_chemical
+		[chemical_Class20006]
+		[chemical_Class20008])
+	(title "Store2"))
+
+([chemical_Class20006] of  StrongAcid
+
+	(exists_in
+		[chemical_Class20005]
+		[chemical_Class30009])
+	(hazard
+		"burnSkin"
+		"asphixiation")
+	(name "HydrochloricAcid")
+	(pH 1.9))
+
+([chemical_Class20007] of  StrongAcid
+
+	(exists_in
+		[chemical_Class20004]
+		[chemical_Class30007]
+		[chemical_Class30009])
+	(hazard "burnSkin")
+	(name "SulphuricAcid")
+	(pH 1.5)
+	(spectroscopy S))
+
+([chemical_Class20008] of  WeakAcid
+
+	(exists_in
+		[chemical_Class20005]
+		[chemical_Class20003]
+		[chemical_Class30010])
+	(name "AceticAcid")
+	(pH 3.1)
+	(smell "vinegar"))
+
+([chemical_Class20009] of  WeakAcid
+
+	(exists_in
+		[chemical_Class20003]
+		[chemical_Class30008]
+		[chemical_Class30010])
+	(name "CarbonicAcid")
+	(pH 4.9)
+	(spectroscopy C))
+
+([chemical_Class20010] of  StrongBase
+
+	(exists_in [chemical_Class30010])
+	(name "SodiumHydroxide")
+	(pH 11.0)
+	(spectroscopy Na))
+
+([chemical_Class20011] of  WeakBase
+
+	(color "White")
+	(exists_in [chemical_Class30008])
+	(name "AluminiumHydroxide")
+	(pH 9.0)
+	(weight 1.6))
+
+([chemical_Class20012] of  WeakBase
+
+	(color "Red")
+	(exists_in [chemical_Class30007])
+	(name "Chromogen23")
+	(pH 9.0)
+	(weight 0.4))
+
+([chemical_Class20013] of  WeakBase
+
+	(exists_in [chemical_Class30006])
+	(name "RubidiumHydroxide")
+	(pH 9.0)
+	(radioactive TRUE)
+	(spectroscopy metal)
+	(weight 1.5))
+
+([chemical_Class20014] of  Oil
+
+	(exists_in
+		[chemical_Class20004]
+		[chemical_Class20003]
+		[chemical_Class30007])
+	(hazard "explosive")
+	(name "Petrol")
+	(pH 6.5)
+	(weight 0.3))
+
+([chemical_Class20015] of  Oil
+
+	(exists_in
+		[chemical_Class30006]
+		[chemical_Class30008])
+	(hazard "hightToxicPCBs")
+	(name "TransformerOil")
+	(pH 6.2))
+
+([chemical_Class30006] of  Manhole3
+
+	(has_chemical
+		[chemical_Class20013]
+		[chemical_Class20015])
+	(title "Store3"))
+
+([chemical_Class30007] of  Manhole5
+
+	(has_chemical
+		[chemical_Class20012]
+		[chemical_Class20007]
+		[chemical_Class20014])
+	(title "Store5"))
+
+([chemical_Class30008] of  Manhole6
+
+	(has_chemical
+		[chemical_Class20011]
+		[chemical_Class20015]
+		[chemical_Class20009])
+	(title "Store6"))
+
+([chemical_Class30009] of  Manhole7
+
+	(has_chemical
+		[chemical_Class20006]
+		[chemical_Class20007])
+	(title "Store7"))
+
+([chemical_Class30010] of  Manhole8
+
+	(has_chemical
+		[chemical_Class20008]
+		[chemical_Class20009]
+		[chemical_Class20010])
+	(title "Store8"))
